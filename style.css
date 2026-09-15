@@ -1,0 +1,730 @@
+/* =====================================================
+   CUMPLEAÑOS
+   PALETA
+   Rosa: #FFCDD6
+   Vino: #6F0A09
+===================================================== */
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background-color: #FFCDD6;
+
+    background-image: url("img/fondo.png");
+    background-repeat: repeat;
+    background-size: 700px 700px;
+    background-attachment: fixed;
+
+    color: #6F0A09;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+===================================================== */
+
+.contenedor {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 55px 20px 70px;
+}
+
+.invitacion {
+    width: 100%;
+    max-width: 850px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   TITULO PRINCIPAL
+===================================================== */
+
+.titulo {
+    display: inline-block;
+
+    padding: 18px 35px;
+
+    /*
+       Fondo transparente para que el pattern
+       siga siendo visible pero desenfocado.
+    */
+    background: rgba(255, 205, 214, 0.68);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border-radius: 22px;
+
+    margin-bottom: 40px;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+        0 8px 30px rgba(111, 10, 9, 0.05);
+}
+
+
+/* =====================================================
+   SUBTITULO
+===================================================== */
+
+.subtitulo {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #6F0A09;
+
+    margin-bottom: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   TITULO
+===================================================== */
+
+.titulo h1 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: clamp(44px, 8vw, 72px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    color: #6F0A09;
+
+    margin: 8px 0 12px;
+}
+
+
+/* =====================================================
+   DECORACIONES
+===================================================== */
+
+.decoracion {
+    display: inline-block;
+
+    color: #6F0A09;
+
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   IMAGEN PRINCIPAL
+===================================================== */
+
+.imagen-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 45px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.imagen-invitacion {
+    display: block;
+
+    width: 100%;
+    max-width: 700px;
+
+    height: auto;
+
+    border-radius: 20px;
+
+    object-fit: cover;
+
+    border: 1px solid rgba(111, 10, 9, 0.10);
+
+    box-shadow:
+        0 20px 50px rgba(111, 10, 9, 0.16);
+}
+
+
+/* =====================================================
+   TARJETA CONFIRMACIÓN
+===================================================== */
+
+.confirmacion {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 35px auto 80px;
+
+    padding: 48px 30px;
+
+    /*
+       ROSA TRANSPARENTE
+       El pattern se sigue viendo,
+       pero queda desenfocado.
+    */
+    background: rgba(255, 205, 214, 0.72);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(111, 10, 9, 0.15);
+
+    border-radius: 26px;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+        0 15px 40px rgba(111, 10, 9, 0.10);
+}
+
+
+/* =====================================================
+   TITULO ¿VENÍS?
+===================================================== */
+
+.confirmacion h2 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: clamp(40px, 6vw, 54px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    color: #6F0A09;
+
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   TEXTO CONFIRMACIÓN
+===================================================== */
+
+.confirmacion p {
+    color: #6F0A09;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin: 0 auto 30px;
+
+    max-width: 500px;
+}
+
+
+/* =====================================================
+   BOTÓN
+===================================================== */
+
+.boton {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    min-width: 280px;
+
+    padding: 16px 32px;
+
+    border-radius: 50px;
+
+    background: #6F0A09;
+
+    color: #FFCDD6;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    box-shadow:
+        0 10px 25px rgba(111, 10, 9, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* FLECHA */
+
+.boton span {
+    font-size: 21px;
+
+    line-height: 1;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+/* HOVER */
+
+.boton:hover {
+    background: #570807;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 32px rgba(111, 10, 9, 0.32);
+}
+
+.boton:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =====================================================
+   UBICACIÓN
+===================================================== */
+
+.ubicacion {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 55px 30px 65px;
+
+    /*
+       MISMO EFECTO TRANSPARENTE
+       PARA QUE EL PATTERN NO MOLESTE
+       A LOS TEXTOS.
+    */
+    background: rgba(255, 205, 214, 0.72);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(111, 10, 9, 0.15);
+
+    border-radius: 28px;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+        0 15px 45px rgba(111, 10, 9, 0.10);
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   SEPARADOR
+===================================================== */
+
+.separador {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-bottom: 27px;
+
+    color: #6F0A09;
+}
+
+.separador::before,
+.separador::after {
+    content: "";
+
+    width: 90px;
+
+    height: 1px;
+
+    background: #6F0A09;
+
+    opacity: 0.55;
+}
+
+
+/* =====================================================
+   SUBTITULO UBICACIÓN
+===================================================== */
+
+.ubicacion .subtitulo {
+    margin-bottom: 9px;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #6F0A09;
+}
+
+
+/* =====================================================
+   TITULO ¿DÓNDE ES?
+===================================================== */
+
+.ubicacion h2 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: clamp(42px, 6vw, 58px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    color: #6F0A09;
+
+    margin: 0 0 16px;
+}
+
+
+/* =====================================================
+   DIRECCIÓN
+===================================================== */
+
+.direccion {
+    display: block;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto 32px;
+
+    color: #6F0A09;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   MAPA
+===================================================== */
+
+.mapa {
+    width: 100%;
+
+    overflow: hidden;
+
+    margin-top: 25px;
+
+    background: #FFCDD6;
+
+    border: 2px solid rgba(111, 10, 9, 0.14);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(111, 10, 9, 0.12);
+}
+
+.mapa iframe {
+    display: block;
+
+    width: 100%;
+
+    height: 400px;
+
+    border: 0;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    width: 100%;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #6F0A09;
+
+    color: #FFCDD6;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+footer p {
+    color: #FFCDD6;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .contenedor {
+        padding: 40px 18px 60px;
+    }
+
+    .confirmacion {
+        padding: 42px 25px;
+
+        margin-bottom: 60px;
+    }
+
+    .ubicacion {
+        padding: 45px 25px 55px;
+    }
+
+    .mapa iframe {
+        height: 380px;
+    }
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        background-size: 520px 520px;
+    }
+
+
+    /* CONTENEDOR */
+
+    .contenedor {
+        padding: 30px 14px 50px;
+    }
+
+
+    /* TITULO */
+
+    .titulo {
+        padding: 15px 20px;
+
+        margin-bottom: 30px;
+
+        border-radius: 18px;
+    }
+
+    .subtitulo {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
+    .titulo h1 {
+        font-size: 45px;
+
+        line-height: 1.08;
+    }
+
+
+    /* IMAGEN */
+
+    .imagen-container {
+        margin-bottom: 30px;
+    }
+
+    .imagen-invitacion {
+        border-radius: 15px;
+    }
+
+
+    /* CONFIRMACIÓN */
+
+    .confirmacion {
+        padding: 35px 20px;
+
+        margin: 25px auto 50px;
+
+        border-radius: 21px;
+
+        background: rgba(255, 205, 214, 0.76);
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .confirmacion h2 {
+        font-size: 40px;
+
+        margin-bottom: 12px;
+    }
+
+    .confirmacion p {
+        font-size: 14px;
+
+        line-height: 1.65;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* BOTÓN */
+
+    .boton {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 16px 20px;
+
+        font-size: 14px;
+
+        gap: 14px;
+    }
+
+
+    /* UBICACIÓN */
+
+    .ubicacion {
+        padding: 40px 18px 45px;
+
+        border-radius: 22px;
+
+        background: rgba(255, 205, 214, 0.76);
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .ubicacion .subtitulo {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
+    .ubicacion h2 {
+        font-size: 42px;
+
+        margin-bottom: 14px;
+    }
+
+
+    /* SEPARADOR */
+
+    .separador {
+        gap: 12px;
+
+        margin-bottom: 23px;
+    }
+
+    .separador::before,
+    .separador::after {
+        width: 55px;
+    }
+
+
+    /* DIRECCIÓN */
+
+    .direccion {
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* MAPA */
+
+    .mapa {
+        margin-top: 20px;
+
+        border-radius: 16px;
+    }
+
+    .mapa iframe {
+        height: 320px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 28px 15px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =====================================================
+   CELULARES MUY PEQUEÑOS
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .titulo h1 {
+        font-size: 39px;
+    }
+
+    .confirmacion h2 {
+        font-size: 36px;
+    }
+
+    .ubicacion h2 {
+        font-size: 37px;
+    }
+
+    .boton {
+        font-size: 13px;
+    }
+
+    .mapa iframe {
+        height: 290px;
+    }
+}
